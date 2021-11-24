@@ -11,6 +11,7 @@
   "dependencies": {
     "lodash.debounce": "^4.0.8",
     "minisearch": "^3.1.0",
-    "postcss": "^8.3.11"
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.19"
   }
 }
