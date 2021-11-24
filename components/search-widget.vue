@@ -9,9 +9,11 @@
         v-if="results && results.length"
         :class="{ 'opacity-50 pointer-events-none animate-pulse': working }"
       >
-        <li v-for="result in results" :key="result.id" class="mb-3">
-          <div class="font-bold">{{ result.id }} - {{ result.label }}</div>
-          <div class="text-sm">{{ result.concept }}</div>
+        <li v-for="result in results" :key="result.id" class="mb-4">
+          <button class="block text-xs font-bold hover:text-black text-gray-500" type="button" @click="q = result.group">{{ result.group }}</button>
+          <div class="font-bold text-sm">{{ result.id }} - {{ result.label }}</div>
+          <div class="text-xs">{{ result.concept }}</div>
+          <div class="text-xs text-gray-500 uppercase">Attributes: {{ result.attributes.replace(/\,/g,", ") }}</div>
         </li>
       </ul>
       <div v-else class="text-gray-500">No results for your query.</div>
